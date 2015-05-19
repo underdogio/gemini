@@ -59,7 +59,9 @@ if (process.env.SAUCE_USERNAME && process.env.SAUCE_ACCESS_KEY) {
 }
 
 exports.eachSupportedBrowser = function(cb) {
-    Object.keys(supportedBrowsers).forEach(function(browserId) {
+    var browsers = process.env.BROWSER in supportedBrowsers?
+        [process.env.BROWSER] : Object.keys(supportedBrowsers);
+    browsers.forEach(function(browserId) {
         browserDescribe('in ' + browserId, function() {
             beforeEach(function() {
                 this.browser = new Browser(testsConfig, browserId);
