@@ -17,7 +17,7 @@
     "inherit": "~2.2.1",
     "js-yaml": "^3.2.5",
     "lodash": "^3.6.0",
-    "looks-same": "^1.1.1",
+    "looks-same": "git://github.com/gemini-testing/looks-same.git#43d1cdd24bf3",
     "minimatch": "^2.0.1",
     "png-img": "~1.1.0",
     "polyfill-service": "~1.1.0",
